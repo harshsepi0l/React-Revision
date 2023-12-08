@@ -1,8 +1,25 @@
-import { useState, useEffect } from "react";
-import Axios from "axios";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
+import ListBuilder from "./components/ListBuilder/ListBuilder";
+import FetchAPI from "./components/FetchAPI/FetchAPI";
+import { Navbar } from "./components/Navbar/Navbar";
+import { ProfilePage } from "./Pages/ProfilePage";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/list" element={<ListBuilder />} />
+          <Route path="/api" element={<FetchAPI />} />
+          <Route path="*" element={<h1> ERROR! </h1>} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 export default App;

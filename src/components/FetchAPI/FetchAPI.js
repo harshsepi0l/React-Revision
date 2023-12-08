@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import "./App.css";
+
 
 /*
 Lifecycle of a component
@@ -23,7 +23,7 @@ export default function FetchAPI() {
   };
 
   return (
-    <div className="App">
+    <div>
       <input
         placeholder="Ex. Harsha..."
         onChange={(e) => setName(e.target.value)}

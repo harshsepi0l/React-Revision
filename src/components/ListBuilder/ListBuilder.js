@@ -1,6 +1,5 @@
-import { Task } from "../Task";
+import { Task } from "./Props/Task";
 import { useState } from "react";
-
 export default function ListBuilder() {
   const [todoList, setTodoList] = useState([]);
   const [newTask, setNewTask] = useState("");
@@ -36,7 +35,7 @@ export default function ListBuilder() {
   };
 
   return (
-    <div className="App">
+    <div>
       <div className="addTask">
         <input onChange={handleChange} />
         <button onClick={addTask}> Add Task</button>
