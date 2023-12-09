@@ -1,36 +1,16 @@
-import "./App.css";
-import { useState } from "react";
+import { useCounter } from "../customHooks/useCounter";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+export const Counter = () => {
+  const { counter, increaseCounter, decreaseCounter, zeroCounter } =
+    useCounter();
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Increase
-      </button>
-      <button
-        onClick={() => {
-          setCount(count - 1);
-        }}
-      >
-        Decrease
-      </button>
-      <button
-        onClick={() => {
-          setCount(0);
-        }}
-      >
-        Set to Zero
-      </button>
+      <button onClick={increaseCounter}>Increase</button>
+      <button onClick={decreaseCounter}>Decrease</button>
+      <button onClick={zeroCounter}>Set to Zero</button>
 
-      {count}
+      <div>Counter: {counter}</div>
     </div>
   );
-}
-
-export default Counter;
+};

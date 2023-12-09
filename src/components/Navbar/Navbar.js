@@ -7,6 +7,7 @@ export const Navbar = () => {
       <Link to="/list">list</Link>
       <Link to="/api">api</Link>
       <Link to="/profile">Profile</Link>
+      <Link to="/counter">Counter</Link>
     </div>
   );
 };
