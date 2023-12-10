@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { ProfilePage } from "./Pages/ProfilePage";
 import { Counter } from "./components/Counter/Counter";
 import { useState, createContext } from "react";
+import { GuessWord } from "./components/GuessWord/GuessWord";
 
 export const AppContext = createContext();
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/list" element={<ListBuilder />} />
             <Route path="/api" element={<FetchAPI />} />
             <Route path="/counter" element={<Counter />} />
+            <Route path="/guessword" element={<GuessWord />} />
             <Route path="*" element={<h1> ERROR! </h1>} />
           </Routes>
         </Router>
