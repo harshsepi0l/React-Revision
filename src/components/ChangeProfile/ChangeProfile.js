@@ -1,18 +1,16 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
 export const ChangeProfile = () => {
-  const [username, setUsername] = useState("");
   const [newUsername, setNewUsername] = useState("");
 
-  const handleChange = () => {
-    setNewUsername(username);
-  };
+  const { setUsername } = useContext(AppContext);
 
   return (
     <div>
-      <input onChange={(e) => setUsername(e.target.value)}></input>
-      <button onClick={handleChange}> Submit </button>
-      <h1> {newUsername}</h1>
+      <input onChange={(e) => setNewUsername(e.target.value)}></input>
+      <button onClick={() => setUsername(newUsername)}> Submit </button>
     </div>
   );
 };

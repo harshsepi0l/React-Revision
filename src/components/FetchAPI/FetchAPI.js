@@ -6,7 +6,7 @@ import Axios from "axios";
 Lifecycle of a component
 
 Mounting
-Upadting
+Updating
 Unmounting
 
 https://api.agify.io/?name=Harsha : API fetching with useEffect
